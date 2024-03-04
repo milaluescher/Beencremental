@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbdwg7acy8on3"]
+
+[ext_resource type="Texture2D" uid="uid://b51mpbcooi87o" path="res://Assets/Misc/syringe16.png" id="1_6enmv"]
+
+[node name="Syringe" type="Sprite2D"]
+texture = ExtResource("1_6enmv")

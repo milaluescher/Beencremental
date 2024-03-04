@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c85d23nl4a8j6"]
+
+[ext_resource type="Texture2D" uid="uid://cmv055ili8iir" path="res://Assets/Misc/railing.png" id="1_fjmlh"]
+
+[node name="railing" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -83.0
+offset_top = -82.0
+offset_right = 83.0
+offset_bottom = 84.0
+color = Color(0.321569, 0.117647, 0.227451, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fjmlh")
