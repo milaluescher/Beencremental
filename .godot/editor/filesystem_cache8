@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1709576766
+bees.gd::GDScript::-1::1709576765::0::1::::<>AnimatedSprite2D<>::
+bees.tscn::PackedScene::4276633560260878455::1709576766::0::1::::<><>::uid://dyapw5giik3ps::::res://Assets/Hives/Beehive.png<>res://bees.gd
+icon.svg::CompressedTexture2D::527267929309728469::1709573164::1709573187::1::::<><>::
+label.tscn::PackedScene::7968403197324290670::1709573164::0::1::::<><>::
+main.gd::GDScript::-1::1709575721::0::1::::<>Node2D<>::
+main.tscn::PackedScene::9140924339506722569::1709576765::0::1::::<><>::res://main.gd<>uid://b16vsatyrgjn0::::res://bees.tscn<>uid://c85d23nl4a8j6::::res://railing.tscn<>uid://dlr7o3sxokra1::::res://label.tscn<>uid://cqucwki2xciyw::::res://PurchaseHive.tscn<>uid://cbdwg7acy8on3::::res://syringe.tscn
+PurchaseHive.tscn::PackedScene::5937311680976874054::1709576766::0::1::::<><>::uid://cdc0r8jjtfsys::::res://Assets/UI/Button64.png
+railing.tscn::PackedScene::7151236398751638981::1709576766::0::1::::<><>::uid://cmv055ili8iir::::res://Assets/Misc/railing.png
+syringe.tscn::PackedScene::4850571513762166614::1709573164::0::1::::<><>::uid://b51mpbcooi87o::::res://Assets/Misc/syringe16.png
+::res://Assets/::1709577511
+::res://Assets/Aesprite/::1709577504
+::res://Assets/Fonts/::1709573164
+::res://Assets/Fonts/Kenney/::1709573187
+Kenney Blocks.ttf::FontFile::2185323879950504443::1709573164::1709573187::1::::<><>::
+Kenney Future Narrow.ttf::FontFile::7376716685386450426::1709573164::1709573187::1::::<><>::
+Kenney Future.ttf::FontFile::8036621805848939173::1709573164::1709573187::1::::<><>::
+Kenney High Square.ttf::FontFile::7262078203625895640::1709573164::1709573187::1::::<><>::
+Kenney High.ttf::FontFile::7922254104831191048::1709573164::1709573187::1::::<><>::
+Kenney Mini Square Mono.ttf::FontFile::6828025863810040979::1709573164::1709573187::1::::<><>::
+Kenney Mini Square.ttf::FontFile::5371685363121600509::1709573164::1709573187::1::::<><>::
+Kenney Mini.ttf::FontFile::8613891744970788190::1709573164::1709573187::1::::<><>::
+Kenney Pixel Square.ttf::FontFile::160339143150023854::1709573164::1709573187::1::::<><>::
+Kenney Pixel.ttf::FontFile::8648851677705751740::1709573164::1709573187::1::::<><>::
+Kenney Rocket Square.ttf::FontFile::3733096388805945059::1709573164::1709573187::1::::<><>::
+Kenney Rocket.ttf::FontFile::1200269794871728698::1709573164::1709573187::1::::<><>::
+::res://Assets/Hives/::1709577511
+Beehive.png::CompressedTexture2D::8844745926093415888::1709577472::1709577513::1::::<><>::
+::res://Assets/Misc/::1709573187
+railing.png::CompressedTexture2D::5660032511084881065::1709573164::1709573187::1::::<><>::
+syringe16.png::CompressedTexture2D::4546515261529515058::1709573164::1709573187::1::::<><>::
+syringe.png::CompressedTexture2D::6968874580305301138::1709573164::1709573187::1::::<><>::
+::res://Assets/UI/::1709573187
+Button64.png::CompressedTexture2D::4989086684732285506::1709573164::1709573187::1::::<><>::
+Button.png::CompressedTexture2D::4518501719375466705::1709573164::1709573187::1::::<><>::
+::res://Scripts/::1709573164
+PlayerVariables.gd::GDScript::-1::1709573164::0::1::::<>Node<>::

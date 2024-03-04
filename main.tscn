@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3h6xn0sfiv2p"]
+[gd_scene load_steps=9 format=3 uid="uid://d3h6xn0sfiv2p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ek21i"]
 [ext_resource type="PackedScene" uid="uid://b16vsatyrgjn0" path="res://bees.tscn" id="1_rpybg"]
 [ext_resource type="PackedScene" uid="uid://c85d23nl4a8j6" path="res://railing.tscn" id="2_rrjaa"]
 [ext_resource type="PackedScene" uid="uid://dlr7o3sxokra1" path="res://label.tscn" id="3_s75ye"]
 [ext_resource type="PackedScene" uid="uid://cqucwki2xciyw" path="res://PurchaseHive.tscn" id="4_35614"]
+[ext_resource type="PackedScene" uid="uid://bpjsuf3nisi7a" path="res://SellHoney.tscn" id="5_2kfkq"]
 [ext_resource type="PackedScene" uid="uid://cbdwg7acy8on3" path="res://syringe.tscn" id="5_l3i4c"]
+[ext_resource type="PackedScene" uid="uid://ccyk32oiv8b7w" path="res://AutoSell.tscn" id="6_ns5ij"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ek21i")
@@ -36,15 +38,21 @@ text = "Money: 0"
 
 [node name="Buttons" type="Node" parent="."]
 
-[node name="Purchase" parent="Buttons" instance=ExtResource("4_35614")]
-position = Vector2(34, 46)
+[node name="PurchaseHive" parent="Buttons" instance=ExtResource("4_35614")]
+position = Vector2(34, 40)
+
+[node name="SellHoney" parent="Buttons" instance=ExtResource("5_2kfkq")]
+position = Vector2(313, 15)
+
+[node name="AutoSell" parent="Buttons" instance=ExtResource("6_ns5ij")]
+position = Vector2(313, 39)
 
 [node name="Bees" type="Node" parent="."]
 
 [node name="Bees" parent="Bees" instance=ExtResource("1_rpybg")]
-position = Vector2(177, 27)
+position = Vector2(179, 69)
 
 [node name="Objects" type="Node" parent="."]
 
 [node name="Syringe" parent="Objects" instance=ExtResource("5_l3i4c")]
-position = Vector2(214, 65)
+position = Vector2(39, 80)

@@ -7,6 +7,7 @@
 [sub_resource type="GDScript" id="GDScript_jfi7y"]
 script/source = "extends Button
 
+var beehive = preload(\"res://bees.tscn\")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,8 +21,12 @@ func _process(delta):
 
 func _on_pressed():
 	# spawn a hive in its location that is stuck to your mouse
-	
-	pass # Replace with function body.
+	if PlayerVariables.money >= 15:
+		PlayerVariables.money -= 15
+		var spawned_bee = beehive.instantiate()
+		spawned_bee.just_spawned = true
+		add_child(spawned_bee)
+
 "
 
 [node name="PurchaseHive" type="Sprite2D"]

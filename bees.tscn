@@ -1,60 +1,84 @@
-[gd_scene load_steps=12 format=3 uid="uid://b16vsatyrgjn0"]
+[gd_scene load_steps=19 format=3 uid="uid://b16vsatyrgjn0"]
 
 [ext_resource type="Texture2D" uid="uid://dyapw5giik3ps" path="res://Assets/Hives/Beehive.png" id="1_h2a1i"]
 [ext_resource type="Script" path="res://bees.gd" id="2_46x5r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4k3y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr4pe"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u75ha"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0s0i"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2msi5"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3d1ix"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_onun3"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(96, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n8v3q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtjay"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(128, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o7ym7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe4kh"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(160, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wx57f"]
-atlas = ExtResource("1_h2a1i")
-region = Rect2(192, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cefky"]
 atlas = ExtResource("1_h2a1i")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsa2s"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs5nd"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8bw2"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v3i2"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdx0x"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4a4p"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(160, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dro0l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4k3y")
+"texture": SubResource("AtlasTexture_dr4pe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u75ha")
+"texture": SubResource("AtlasTexture_y0s0i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3d1ix")
+"texture": SubResource("AtlasTexture_2msi5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n8v3q")
+"texture": SubResource("AtlasTexture_onun3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o7ym7")
+"texture": SubResource("AtlasTexture_gtjay")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wx57f")
+"texture": SubResource("AtlasTexture_xe4kh")
 }],
 "loop": true,
 "name": &"bees",
-"speed": 8.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -63,26 +87,68 @@ animations = [{
 "loop": true,
 "name": &"empty",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsa2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs5nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8bw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v3i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdx0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4a4p")
+}],
+"loop": true,
+"name": &"honeybees",
+"speed": 6.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cclg"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svsxm"]
+size = Vector2(17, 23.5)
+
 [node name="Bees" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_dro0l")
-animation = &"bees"
+animation = &"honeybees"
 autoplay = "bees"
-frame_progress = 0.166576
+frame_progress = 0.941448
 script = ExtResource("2_46x5r")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
 [node name="Button" type="Button" parent="."]
-offset_left = -8.0
-offset_top = -10.0
-offset_right = 8.0
-offset_bottom = 7.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -25.0
+offset_right = -7.0
+offset_bottom = -8.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1cclg")
 flat = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Placing" type="Area2D" parent="."]
+position = Vector2(-7, -9)
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placing"]
+position = Vector2(5.5, 4.75)
+shape = SubResource("RectangleShape2D_svsxm")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="area_entered" from="Placing" to="." method="_on_placing_area_entered"]
+[connection signal="area_exited" from="Placing" to="." method="_on_placing_area_exited"]
