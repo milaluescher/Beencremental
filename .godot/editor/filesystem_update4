@@ -7,3 +7,5 @@ res://railing.tscn
 res://Scripts/PlayerVariables.gd
 res://SellHoney.tscn
 res://AutoSell.tscn
+res://AutoHarvest.tscn
+res://Steroids.tscn

@@ -15,7 +15,16 @@ func _process(delta):
 		if Input.is_action_just_pressed("ia_lmb"):
 			if can_place:
 				just_spawned = false
-
+	
+	if PlayerVariables.auto_harvest:
+		if PlayerVariables.steroids:
+			play("mutated")
+		else:
+			play("autoharvest")
+		can_harvest = false
+		get_node("Button").visible = false
+		get_node("Timer").stop()
+		
 func _on_button_pressed():
 	if just_spawned == false:
 		if can_harvest:
@@ -36,3 +45,9 @@ func _on_placing_area_entered(area):
 func _on_placing_area_exited(area):
 	if area.name == "railing":
 		can_place = false
+
+func _on_autoharvest_timeout():
+	if PlayerVariables.auto_harvest:
+		PlayerVariables.honey  += 1
+		get_node("autoharvest").wait_time = PlayerVariables.harvest_cooldown
+		get_node("autoharvest").start()

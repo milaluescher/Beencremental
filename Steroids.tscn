@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyvmq5bqff1n2"]
+
+[ext_resource type="Texture2D" uid="uid://cdc0r8jjtfsys" path="res://Assets/UI/Button64.png" id="1_jktg3"]
+[ext_resource type="Texture2D" uid="uid://b51mpbcooi87o" path="res://Assets/Misc/syringe16.png" id="2_n02hl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfpsl"]
+
+[sub_resource type="GDScript" id="GDScript_1g0dw"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_pressed():
+	if PlayerVariables.money >= 1000:
+		PlayerVariables.money -= 1000
+		PlayerVariables.steroids = true
+		get_node(\"..\").visible = false
+"
+
+[node name="Steroids" type="Sprite2D"]
+texture = ExtResource("1_jktg3")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -32.0
+offset_top = -9.0
+offset_right = 32.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jfpsl")
+flat = true
+script = SubResource("GDScript_1g0dw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -35.0
+offset_top = -9.0
+offset_right = 21.0
+offset_bottom = 3.0
+text = "Steroids:"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -35.0
+offset_top = -3.0
+offset_right = 21.0
+offset_bottom = 7.0
+text = "1000 $"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(21, -1)
+texture = ExtResource("2_n02hl")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

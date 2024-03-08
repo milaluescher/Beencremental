@@ -47,7 +47,7 @@ offset_left = -29.0
 offset_top = -9.0
 offset_right = 29.0
 offset_bottom = 1.0
-text = "Autoseller:"
+text = "Auto-seller:"
 label_settings = SubResource("LabelSettings_ic672")
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -57,7 +57,7 @@ offset_left = -20.0
 offset_top = -3.0
 offset_right = 20.0
 offset_bottom = 7.0
-text = "50$"
+text = "50 $"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

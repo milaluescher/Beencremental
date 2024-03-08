@@ -1,7 +1,56 @@
-[gd_scene load_steps=19 format=3 uid="uid://b16vsatyrgjn0"]
+[gd_scene load_steps=38 format=3 uid="uid://b16vsatyrgjn0"]
 
 [ext_resource type="Texture2D" uid="uid://dyapw5giik3ps" path="res://Assets/Hives/Beehive.png" id="1_h2a1i"]
 [ext_resource type="Script" path="res://bees.gd" id="2_46x5r"]
+[ext_resource type="Texture2D" uid="uid://bvn4mo86jobd4" path="res://Assets/Hives/beehivemutated.png" id="2_cxb1s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2qph"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykr4e"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppmtr"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npqke"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htqhb"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(128, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g4gs"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(160, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k3j8"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5gqv"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h73d"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qb4b"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4ij0"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36wja"]
+atlas = ExtResource("1_h2a1i")
+region = Rect2(160, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dr4pe"]
 atlas = ExtResource("1_h2a1i")
@@ -55,8 +104,78 @@ region = Rect2(128, 64, 32, 32)
 atlas = ExtResource("1_h2a1i")
 region = Rect2(160, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kokkp"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d6wn"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36l6o"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56l1c"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f5et"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv5tv"]
+atlas = ExtResource("2_cxb1s")
+region = Rect2(160, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dro0l"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2qph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykr4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppmtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npqke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htqhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g4gs")
+}],
+"loop": true,
+"name": &"autoharvest",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k3j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5gqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h73d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qb4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4ij0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36wja")
+}],
+"loop": true,
+"name": &"autoharvestfull",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dr4pe")
@@ -110,6 +229,29 @@ animations = [{
 "loop": true,
 "name": &"honeybees",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kokkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d6wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36l6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56l1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f5et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv5tv")
+}],
+"loop": true,
+"name": &"mutated",
+"speed": 5.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cclg"]
@@ -119,10 +261,13 @@ size = Vector2(17, 23.5)
 
 [node name="Bees" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_dro0l")
-animation = &"honeybees"
+animation = &"mutated"
 autoplay = "bees"
-frame_progress = 0.941448
 script = ExtResource("2_46x5r")
+
+[node name="autoharvest" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
@@ -148,6 +293,7 @@ position = Vector2(-7, -9)
 position = Vector2(5.5, 4.75)
 shape = SubResource("RectangleShape2D_svsxm")
 
+[connection signal="timeout" from="autoharvest" to="." method="_on_autoharvest_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="Placing" to="." method="_on_placing_area_entered"]
